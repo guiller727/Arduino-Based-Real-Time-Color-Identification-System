@@ -41,13 +41,29 @@ The system uses a state machine architecture to manage calibration, scanning, pr
   
 ---
 
-## 🔄 System Workflow
-1. Color sensor detects reflected light intensity
-2. Arduino converts signals into RGB frequency values
-3. Data is sent via Serial communication
-4. Python receives and processes incoming data
-5. System classifies and outputs detected color in real time
+## 🚀 Key Features
 
+- Real-time color detection using TCS3200 sensor
+- Calibration system using black/white reference
+- RGB normalization (0–255 scaling)
+- Nearest HTML color matching (Euclidean distance)
+- Bidirectional Arduino ↔ Python communication
+- 16x2 LCD real-time display with scrolling text
+- Color-blind friendly output descriptions
+
+---
+
+## 🔄 System Workflow
+
+1. System calibrates using black and white reference values
+2. User triggers scanning via push button
+3. Arduino reads RGB sensor values
+4. Arduino normalizes RGB (0–255 scale)
+5. Data is sent to Python via serial communication
+6. Python processes and classifies color
+7. Python sends formatted result back to Arduino
+8. Arduino displays output on 16x2 LCD
+   
 ---
 
 ## 📊 Output Display Format
@@ -62,35 +78,28 @@ Green Family | Forest Green | Medium, soft
 
 ---
 
-## 🔄 System Workflow
+## 🔄 System Interaction
 
-1. System initializes and enters calibration mode
-   - Reads black and white reference values
-   - Normalizes sensor range to improve accuracy (0–255 scale)
+- Arduino acts as the **main controller**
+  - Handles calibration
+  - Manages sensor readings
+  - Controls LCD display
+  - Runs system state machine
 
-2. User presses push button to start scanning
+- Python acts as the **processing unit**
+  - Receives RGB values from Arduino
+  - Performs color classification using Euclidean distance
+  - Maps RGB → HTML color → family group → description
+  - Sends formatted result back
 
-3. TCS3200 sensor captures raw RGB frequency values
+- Communication is handled via **bidirectional Serial protocol**
+  - Arduino → Python: `RGB:R,G,B`
+  - Python → Arduino: `OK|Family|HTML Color|Description`
 
-4. Arduino processes and normalizes RGB values
-
-5. Arduino sends data to Python in format:
-   RGB:R,G,B
-
-6. Python processes incoming data:
-   - Finds closest HTML color using Euclidean distance
-   - Determines color family grouping
-   - Retrieves accessibility-friendly description
-
-7. Python sends formatted response:
-   OK|Family|HTML Color|Description
-
-8. Arduino receives response and displays it on:
-   - 16x2 I2C LCD
-   - Includes scrolling text for long outputs
-
-9. System returns to standby state until next scan
-    
+- LCD acts as the **user interface layer**
+  - Displays processed results
+  - Handles scrolling text for long outputs
+ 
 ---
 
 ## 📂 Project Structure
