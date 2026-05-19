@@ -10,13 +10,13 @@ The system demonstrates integration between hardware-level sensing and software-
 ## ⚙️ System Architecture
 
 ### Block Diagram
-![Block Diagram](assets/block_diagram_system_overview.png)
+![Block Diagram](assets/01_block_diagram_system_overview.png)
 
 ### Flowchart
-![Flowchart](assets/flowchart_color_detection_logic.png)
+![Flowchart](assets/02_flowchart_color_detection_logic.png)
 
 ### Circuit Diagram
-![Circuit Diagram](assets/circuit_diagram_tcs3200_arduino_uno.png)
+![Circuit Diagram](assets/03_circuit_diagram_tcs3200_arduino_uno.png)
 
 ---
 
@@ -46,3 +46,15 @@ The system demonstrates integration between hardware-level sensing and software-
 ---
 
 ## 📂 Project Structure
+
+```
+arduino/
+│── color_sensor.ino        # Arduino code for sensor data acquisition  
+
+python/
+│── color_processor.py      # Python script for processing and classification  
+
+assets/
+│── 01_block_diagram_system_overview.png  
+│── 02_flowchart_color_detection_logic.png  
+│── 03_circuit_diagram_tcs3200_arduino_uno.png  
