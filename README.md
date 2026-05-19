@@ -23,6 +23,8 @@ The system demonstrates integration between hardware-level sensing and software-
 ## 🔧 Hardware Components
 - Arduino Uno
 - TCS3200 Color Sensor
+- 16x2 LCD (I2C Module)
+- Push Button (for input/control)
 - Breadboard
 - Jumper wires
 
@@ -31,9 +33,10 @@ The system demonstrates integration between hardware-level sensing and software-
 ## 💻 Software Tools
 - Arduino IDE
 - Python 3.x
-- PySerial
+- PySerial (for serial communication)
+- LiquidCrystal_I2C library (Frank de Brabander)
 - NumPy (optional for processing)
-
+  
 ---
 
 ## 🔄 System Workflow
@@ -44,6 +47,14 @@ The system demonstrates integration between hardware-level sensing and software-
 5. System classifies and outputs detected color in real time
 
 ---
+
+## 📊 Output Display Format
+
+The system displays detected color information in the following format:
+
+**Family Group | HTML Color Name | Color Description (for color-blind users) 
+
+Example:
 
 ## 📂 Project Structure
 
