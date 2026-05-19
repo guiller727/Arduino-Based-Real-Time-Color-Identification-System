@@ -52,9 +52,15 @@ The system demonstrates integration between hardware-level sensing and software-
 
 The system displays detected color information in the following format:
 
-**Family Group | HTML Color Name | Color Description (for color-blind users) 
+**Family Group | HTML Color | Color Description (for color-blind users)**
 
 Example:
+Red Family | Crimson | Dark, strong
+Green Family | Forest Green | Medium, soft
+
+---
+
+
 
 ## 📂 Project Structure
 
