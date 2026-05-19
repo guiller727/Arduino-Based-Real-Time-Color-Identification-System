@@ -60,7 +60,35 @@ Green Family | Forest Green | Medium, soft
 
 ---
 
+## 🔄 System Interaction
 
+1. System starts in calibration mode
+   - Arduino measures **white reference and black reference**
+   - Values are normalized to a 0–255 range
+
+2. User presses push button to start scanning
+
+3. TCS3200 sensor captures raw frequency values for RGB channels
+
+4. Arduino processes and normalizes RGB values (0–255 scale)
+
+5. Arduino sends RGB data to Python via Serial communication
+
+6. Python performs:
+   - HTML color matching
+   - Color family classification
+   - Color-blind friendly description lookup
+
+7. Python sends formatted result back to Arduino:
+   `OK|Family|HTML Color|Description`
+
+8. Arduino receives data and displays it on:
+   - 16x2 LCD display (I2C)
+   - Includes scrolling UI for long text
+
+9. System pauses briefly before returning to standby mode
+
+---
 
 ## 📂 Project Structure
 
