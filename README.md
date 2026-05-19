@@ -1,4 +1,4 @@
-# 🟦 Arduino-Based Real-Time Color Identification System
+# Arduino-Based Real-Time Color Identification System
 
 ## 📌 Overview
 This project is a calibrated embedded color recognition system that integrates Arduino-based sensor acquisition with Python-based classification and bidirectional serial communication.
