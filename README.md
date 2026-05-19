@@ -78,27 +78,21 @@ Green Family | Forest Green | Medium, soft
 
 ---
 
-## 🔄 System Interaction
+## 🔄 System Interaction (Architecture View)
 
-- Arduino acts as the **main controller**
-  - Handles calibration
-  - Manages sensor readings
-  - Controls LCD display
-  - Runs system state machine
+Arduino ↔ Python communication forms a closed-loop embedded system.
 
-- Python acts as the **processing unit**
-  - Receives RGB values from Arduino
-  - Performs color classification using Euclidean distance
-  - Maps RGB → HTML color → family group → description
-  - Sends formatted result back
+- Arduino is responsible for hardware-level operations:
+  sensor reading, calibration, LCD control, and state machine execution.
 
-- Communication is handled via **bidirectional Serial protocol**
-  - Arduino → Python: `RGB:R,G,B`
-  - Python → Arduino: `OK|Family|HTML Color|Description`
+- Python is responsible for data-level intelligence:
+  color classification, nearest-color matching, and descriptive mapping.
 
-- LCD acts as the **user interface layer**
-  - Displays processed results
-  - Handles scrolling text for long outputs
+- Communication pipeline:
+  Arduino → Python: raw RGB values  
+  Python → Arduino: processed classification results
+
+- LCD serves as the final output interface controlled by Arduino.
  
 ---
 
