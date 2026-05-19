@@ -1,9 +1,11 @@
 # 🟦 Arduino-Based Real-Time Color Identification System
 
 ## 📌 Overview
-This project is a real-time embedded system that detects and identifies colors using an Arduino Uno and a TCS3200 color sensor. It captures raw sensor data, transmits it via serial communication, and processes it using a Python-based classification system.
+This project is a calibrated embedded color recognition system that integrates Arduino-based sensor acquisition with Python-based classification and bidirectional serial communication.
 
-The system demonstrates integration between hardware-level sensing and software-level data processing.
+It features real-time RGB normalization, nearest-color matching using Euclidean distance, and an accessibility-focused color description layer designed for color-blind users.
+
+The system uses a state machine architecture to manage calibration, scanning, processing, and display phases.
 
 ---
 
