@@ -72,7 +72,8 @@ The system displays detected color information in the following format:
 
 **Family Group | HTML Color | Color Description (for color-blind users)**
 
-Example:
+Examples:
+
 Red Family | Crimson | Dark, strong
 
 Green Family | Forest Green | Medium, soft
