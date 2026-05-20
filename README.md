@@ -96,6 +96,20 @@ Arduino ↔ Python communication forms a closed-loop embedded system.
  
 ---
 
+## ⚠️ Limitations
+
+- **Lighting Sensitivity** – Accuracy depends on ambient lighting and shadows.
+- **Surface Variability** – Different materials affect sensor readings.
+- **Calibration Required** – Needs proper black/white calibration before use.
+- **Color Accuracy Limits** – Nearest-color matching may not reflect exact human perception.
+- **Serial Dependency** – Relies on Arduino ↔ Python communication, causing possible delays.
+- **Not Standalone** – Requires a computer to run the Python processing script.
+- **No Power Switch** – Operates via USB without a dedicated ON/OFF control.
+- **LCD Constraints** – Limited display space requires scrolling.
+- **Environmental Factors** – Performance may vary in uncontrolled conditions.
+
+---
+
 ## 📂 Project Structure
 
 ```
