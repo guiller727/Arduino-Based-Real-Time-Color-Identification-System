@@ -74,6 +74,7 @@ The system displays detected color information in the following format:
 
 Example:
 Red Family | Crimson | Dark, strong
+
 Green Family | Forest Green | Medium, soft
 
 ---
